@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Flat Speakers - Discover the revolutionary DML technology in our Flat Speakers.">
+        <meta name="keywords" content="Flat Speakers, DML, flat speakers, slim speakers, audio technology">
+        <title>Flat Speakers</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <nav class="fixed-nav">
+            <div class="nav-menu">
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    ☰
+                </div>
+                <div class="menu-items">
+                    <button aria-label="Flat Speakers" onclick="scrollToSection('section1')">Flat Speakers</button>
+                    <button aria-label="Features" onclick="scrollToSection('section2')">Features</button>
+                    <button aria-label="Version" onclick="scrollToSection('section3')">Prices</button>
+                    <button aria-label="Applications" onclick="scrollToSection('section4')">Applications</button>
+                    <button aria-label="Demos" onclick="scrollToSection('section5')">Demos</button>
+                </div>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo-compact.png" alt="Flat Speakers Logo">
+            </a>
+        </nav>
+
+        <div class="floating-demo-button">
+            <button class="contact-us" aria-label="Contact Us" onclick="contactUs()">Contact Us</button>
+        </div>
+
+        <section id="section1" class="scroll-section">
+            <div class="main-container">
+                <p class="main-description"> 
+                    Flat Speakers employ advanced DML technology to deliver affordable, high-fidelity sound in an elegant, ultra-slim form factor.
+                    Seamlessly integrating into any space, Flat Speakers serve as a canvas for your decorative imagination.
+                </p>
+                
+                <div class="models-section">
+                    <div class="subsection" style="background-image: url('assets/deep-bass-cover.png');">
+                        <div class="card">
+                            <h3>Deep Bass</h3>
+                            <p>30mm flat panel that delivers on the bass. Frequencies range from 55Hz up to 16.5KHz.</p>
+                        </div>
+                        <button class="details" aria-label="details" onclick="details('assets/deep-bass.mp4')">Details</button>
+                    </div>
+                    <div class="subsection" style="background-image: url('assets/ultra-slim-cover.png');">
+                        <div class="card">
+                            <h3>Ultra Slim</h3>
+                            <p>3mm flat panel that is sure to please all listeners. Frequencies range from 65Hz up to 15.5KHz.</p>
+                        </div>
+                        <button class="details" aria-label="details" onclick="details('assets/ultra-slim.mp4')">Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2" class="scroll-section">
+            <div class="main-container">                
+                <h2 class="advantages-title">Features</h2>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="showPanel(0, 'carousel1')"></span>
+                    <span class="dot" onclick="showPanel(1, 'carousel1')"></span>
+                    <span class="dot" onclick="showPanel(2, 'carousel1')"></span>
+                    <span class="dot" onclick="showPanel(3, 'carousel1')"></span>
+                    <span class="dot" onclick="showPanel(4, 'carousel1')"></span>
+                    <span class="dot" onclick="showPanel(5, 'carousel1')"></span>
+                    <span class="dot" onclick="showPanel(6, 'carousel1')"></span>
+                    <span class="dot" onclick="showPanel(7, 'carousel1')"></span>
+                </div>
+                <div class="carousel" id="carousel1">
+                    <div class="carousel-panel active">
+                        <div class="loading-bar"></div>
+                        <h3>Balanced Response Across Frequencies</h3>
+                        <p class="secondary-description">
+                            Regular bookshelf speakers require a subwoofer to handle lower frequencies. Flat
+                            speakers provide consistent and balanced bass, mid, and high frequencies, so you don’t need
+                            additional equipment to enjoy high-quality sound.
+                        </p>
+                        <div class="img-carousel">
+                            <img src="assets/ideal-freq-response.png" alt="Balanced Response">
+                        </div>
+                    </div>
+                    <div class="carousel-panel">
+                        <div class="loading-bar"></div>
+                        <h3>Sound Clarity</h3>
+                        <p class="secondary-description">
+                            Sound is naturally produced by vibrations that move air around an instrument. Our flat panels
+                            replicate this process by creating vibration regions on the panel. This method closely mimics the
+                            original sound source. Bookshelf speakers rely on a cone or diaphragm to produce sound,
+                            which can limit accuracy.
+                        </p>
+                        <div class="img-carousel">
+                            <img src="assets/sound-clarity.webp" alt="Sound Clarity">
+                        </div>
+                    </div>
+                    <div class="carousel-panel">
+                        <div class="loading-bar"></div>
+                        <h3>Sound Coverage</h3>
+                        <p class="secondary-description">
+                            Cone speakers deliver the best sound when the listener is directly in front of them, often requiring
+                            multiple speakers to cover a room. Our Flat Speakers, however, can project sound up to 170 degrees
+                            from a single panel, providing expansive coverage and easily filling the room with one (mono) or two
+                            (stereo) flat speakers.
+                        </p>
+                        <div class="img-carousel">
+                            <img src="assets/sound_propagation.png" alt="Sound Coverage">
+                        </div>
+                    </div>
+                    <div class="carousel-panel">
+                        <div class="loading-bar"></div>
+                        <h3>Sound Reach and Attenuation</h3>
+                        <p class="secondary-description">
+                            Flat speakers excel in maintaining sound quality over longer distances compared to bookshelf speakers. Cone speakers
+                            often attenuate lower frequencies over distance, leading to a high-pitched sound. Flat speakers preserve the full
+                            range of frequencies, ensuring consistent sound quality.
+                        </p>
+                        <div class="img-carousel">
+                            <img src="assets/attenuation.png" alt="Sound Reach and Attenuation">
+                        </div>
+                    </div>
+                    <div class="carousel-panel">
+                        <div class="loading-bar"></div>
+                        <h3>Minimum Room Interactions</h3>
+                        <p class="secondary-description">
+                            Unlike bookshelf speakers, which can cause sound reflections and resonance within a room, our flat panels have minimal
+                            interaction with the room environment. Their design reduces unwanted reflections, providing a clearer sound experience.
+                        </p>
+                        <div class="img-carousel">
+                            <img src="assets/sound_dispersion.png" alt="Minimum Room Interactions">
+                        </div>
+                    </div>
+                    <div class="carousel-panel">
+                        <div class="loading-bar"></div>
+                        <h3>Bidirectional Speaker</h3>
+                        <p class="secondary-description">
+                            Flat Speakers are ideal for musicians, churches, pubs, and live performers because they emit sound from both the front
+                            and back of the panel. This creates an almost 360-degree sound experience, eliminating the need for separate monitors.
+                        </p>
+                        <div class="img-carousel">
+                            <img src="assets/bidirectional_sound.png" alt="Bidirectional Speaker">
+                        </div>
+                    </div>
+                    <div class="carousel-panel">
+                        <div class="loading-bar"></div>
+                        <h3>Portable</h3>
+                        <p class="secondary-description">
+                            Weighing just 2 kg, our speakers are perfect for on-the-go listening, providing high-quality sound without taking up
+                            much space in your vehicle.
+                        </p>
+                        <div class="img-carousel">
+                            <img src="assets/portable.png" alt="Portable">
+                        </div>
+                    </div>
+                    <div class="carousel-panel">
+                        <div class="loading-bar"></div>
+                        <h3>No Mic Feedback</h3>
+                        <p class="secondary-description">
+                            Flat Speakers are a great choice for live performances because they are inherently immune to feedback sounds caused by
+                            microphones or instruments. This ensures a smooth and uninterrupted audio experience.
+                        </p>
+                        <div class="img-carousel">
+                            <img src="assets/no_mic_feedback.png" alt="No Mic Feedback">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel1')">❮</div>
+                    <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel1')">❯</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" class="scroll-section">
+            <div class="main-container">
+                <h2 class="prices-title">Prices</h2>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="showPanel(0, 'carousel2')"></span>
+                    <span class="dot" onclick="showPanel(1, 'carousel2')"></span>
+                </div>
+                <div class="carousel" id="carousel2">
+                    <div class="carousel-panel active">
+                        <div class="loading-bar"></div>
+                        <div class="two-column">
+                            <div>
+                                <h3>Mono</h3>
+                                <p class="secondary-description">
+                                    One Deep Bass or Ultra Slim model starting at AU$180.
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Stereo</h3>
+                                <p class="secondary-description">
+                                    Two (Left and Right) Deep Bass or Ultra Slim model starting at AU$280.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-panel">
+                        <div class="loading-bar"></div>
+                        <div class="two-column">
+                            <div>
+                                <h3>Included</h3>
+                                <ul class="modern-bullet-list">
+                                    <li>Flat Speaker</li>
+                                    <li>Power Supply 12Vdc 3A</li>
+                                    <li>Connection Cables</li>
+                                    <li>Dampening structure</li>
+                                    <li>Painted finishing. Feel free to choose the color</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3>Optionals</h3>
+                                <ul class="modern-bullet-list">
+                                    <li>Tripod</li>
+                                    <li>Wall mount</li>
+                                    <li>Cover with art, portraits, phrases, etc</li>
+                                    <li>LED backed panel</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel2')">❮</div>
+                    <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel2')">❯</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section4" class="scroll-section">
+            <div class="main-container">
+                <h2 class="applications-title">Applications</h2>                
+            </div>
+        </section>
+
+        <section id="section5" class="scroll-section">
+            <div class="main-container">
+                <h2 class="demos-title">Demos</h2>
+            </div>
+        </section>
+    </body>
+</html>
