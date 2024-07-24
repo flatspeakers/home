@@ -93,107 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Carousel functionality
-    const carousels = document.querySelectorAll('.carousel');
-    carousels.forEach((carousel) => {
-        const carouselPanels = carousel.querySelectorAll('.carousel-panel');
-        const loadingBars = carousel.querySelectorAll('.loading-bar');
-        const dots = carousel.parentElement.querySelectorAll('.dot');
-        let currentPanel = 0;
-        let interval;
-        let progress = 0;
-
-        const showPanel = (index) => {
-            carouselPanels.forEach((panel, i) => {
-                if (i === index) {
-                    panel.classList.add('active');
-                    loadingBars[i].style.width = '0%';
-                    if (dots[i]) dots[i].classList.add('active');
-                    progress = 0;
-                } else {
-                    panel.classList.remove('active');
-                    loadingBars[i].style.width = '0%';
-                    if (dots[i]) dots[i].classList.remove('active');
-                }
-            });
-        };
-
-        const updateLoadingBar = () => {
-            if (progress < 100) {
-                progress += 0.2;
-                loadingBars[currentPanel].style.width = `${progress}%`;
-            } else {
-                nextPanel();
-            }
-        };
-
-        const nextPanel = () => {
-            clearInterval(interval);
-            progress = 0;
-            currentPanel = (currentPanel + 1) % carouselPanels.length;
-            showPanel(currentPanel);
-            interval = setInterval(updateLoadingBar, 30);
-        };
-
-        const prevPanel = () => {
-            clearInterval(interval);
-            progress = 0;
-            currentPanel = (currentPanel - 1 + carouselPanels.length) % carouselPanels.length;
-            showPanel(currentPanel);
-            interval = setInterval(updateLoadingBar, 30);
-        };
-
-        const pauseCarousel = () => {
-            clearInterval(interval);
-        };
-
-        const resumeCarousel = () => {
-            interval = setInterval(updateLoadingBar, 30);
-        };
-
-        carousel.addEventListener('touchstart', (e) => {
-            pauseCarousel();
-        });
-
-        carousel.addEventListener('touchend', (e) => {
-            resumeCarousel();
-        });
-
-        carousel.addEventListener('mousedown', (e) => {
-            pauseCarousel();
-        });
-
-        carousel.addEventListener('mouseup', (e) => {
-            resumeCarousel();
-        });
-
-        interval = setInterval(updateLoadingBar, 30);
-
-        // Swipe functionality for carousel
-        let startX;
-        const handleSwipe = (startX, endX) => {
-            if (startX - endX > 50) {
-                // Swipe left
-                nextPanel();
-            } else if (endX - startX > 50) {
-                // Swipe right
-                prevPanel();
-            }
-        };
-
-        carousel.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        carousel.addEventListener('touchend', (e) => {
-            const endX = e.changedTouches[0].clientX;
-            handleSwipe(startX, endX);
-        });
-
-        // Functions for navigating panels with arrows
-        carousel.parentElement.querySelector('.left-arrow').addEventListener('click', prevPanel);
-        carousel.parentElement.querySelector('.right-arrow').addEventListener('click', nextPanel);
-    });
+    // Initialize carousels
+    initializeCarousel('carousel1');
+    initializeCarousel('carousel2');
+    initializeCarousel('carousel3');
+    initializeCarousel('carousel4');
+    initializeCarousel('carousel5');
 });
 
 function contactUs() {
@@ -234,4 +139,94 @@ function closeVideo() {
 
 function details(videoPath) {
     showVideo(videoPath);
+}
+
+function initializeCarousel(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const carouselPanels = carousel.querySelectorAll('.carousel-panel');
+    const loadingBars = carousel.querySelectorAll('.loading-bar');
+    const dots = carousel.parentElement.querySelectorAll('.dot');
+    let currentPanel = 0;
+    let interval;
+    let progress = 0;
+
+    const showPanel = (index) => {
+        carouselPanels.forEach((panel, i) => {
+            if (i === index) {
+                panel.classList.add('active');
+                loadingBars[i].style.width = '0%';
+                if (dots[i]) dots[i].classList.add('active');
+                progress = 0;
+            } else {
+                panel.classList.remove('active');
+                loadingBars[i].style.width = '0%';
+                if (dots[i]) dots[i].classList.remove('active');
+            }
+        });
+    };
+
+    const updateLoadingBar = () => {
+        if (progress < 100) {
+            progress += 0.2;
+            loadingBars[currentPanel].style.width = `${progress}%`;
+        } else {
+            nextPanel();
+        }
+    };
+
+    const nextPanel = () => {
+        clearInterval(interval);
+        progress = 0;
+        currentPanel = (currentPanel + 1) % carouselPanels.length;
+        showPanel(currentPanel);
+        interval = setInterval(updateLoadingBar, 30);
+    };
+
+    const prevPanel = () => {
+        clearInterval(interval);
+        progress = 0;
+        currentPanel = (currentPanel - 1 + carouselPanels.length) % carouselPanels.length;
+        showPanel(currentPanel);
+        interval = setInterval(updateLoadingBar, 30);
+    };
+
+    const pauseCarousel = () => {
+        clearInterval(interval);
+    };
+
+    const resumeCarousel = () => {
+        interval = setInterval(updateLoadingBar, 30);
+    };
+
+    carousel.addEventListener('touchstart', pauseCarousel);
+    carousel.addEventListener('touchend', resumeCarousel);
+    carousel.addEventListener('mousedown', pauseCarousel);
+    carousel.addEventListener('mouseup', resumeCarousel);
+
+    interval = setInterval(updateLoadingBar, 30);
+
+    // Swipe functionality for carousel
+    let startX;
+    const handleSwipe = (startX, endX) => {
+        if (startX - endX > 50) {
+            // Swipe left
+            nextPanel();
+        } else if (endX - startX > 50) {
+            // Swipe right
+            prevPanel();
+        }
+    };
+
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        handleSwipe(startX, endX);
+    });
+
+    // Functions for navigating panels with arrows
+    carousel.parentElement.querySelector('.left-arrow').addEventListener('click', prevPanel);
+    carousel.parentElement.querySelector('.right-arrow').addEventListener('click', nextPanel);
 }

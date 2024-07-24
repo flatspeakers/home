@@ -190,13 +190,13 @@
                             <div>
                                 <h3>Mono</h3>
                                 <p class="secondary-description">
-                                    One Deep Bass or Ultra Slim model starting at AU$180.
+                                    One Deep Bass or Ultra Slim model starting at A$180.
                                 </p>
                             </div>
                             <div>
                                 <h3>Stereo</h3>
                                 <p class="secondary-description">
-                                    Two (Left and Right) Deep Bass or Ultra Slim model starting at AU$280.
+                                    Two (Left and Right) Deep Bass or Ultra Slim model starting at A$280.
                                 </p>
                             </div>
                         </div>
@@ -313,6 +313,50 @@
         <section id="section5" class="scroll-section">
             <div class="main-container">
                 <h2 class="demos-title">Demos</h2>
+                <div class="demos-carousels">
+                    <h3 class="demos-title">Deep Bass Model</h3>
+                    <div class="carousel" id="carousel4">
+                        <div class="carousel-panel active">
+                            <div class="loading-bar"></div>
+                            <div class="card">
+                                <h3>Demo 1</h3>
+                            </div>
+                            <button class="details" aria-label="take a listen" onclick="details('assets/sample_1.mp4')">Take a listen</button>
+                        </div>
+                        <div class="carousel-panel">
+                            <div class="loading-bar"></div>
+                            <div class="card">
+                                <h3>Demo 2</h3>
+                            </div>
+                            <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="demos-carousels">
+                    <h3 class="demos-title">Ultra Thin Model</h3>
+                    <div class="carousel" id="carousel5">
+                        <div class="carousel-panel active">
+                            <div class="loading-bar"></div>
+                            <div class="card">
+                                <h3>Demo 1</h3>
+                            </div>
+                            <button class="details" aria-label="take a listen" onclick="details('assets/sample_1.mp4')">Take a listen</button>
+                        </div>
+                        <div class="carousel-panel">
+                            <div class="loading-bar"></div>
+                            <div class="card">
+                                <h3>Demo 2</h3>
+                            </div>
+                            <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel4')">❮</div>
+                    <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel4')">❯</div>
+                    <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel5')">❮</div>
+                    <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel5')">❯</div>
+                </div>
             </div>
         </section>
     </body>

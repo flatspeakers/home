@@ -169,7 +169,7 @@ h6 {
     background-repeat: no-repeat;
 }
 
-.subsection .details {
+.details {
     background: var(--black);
     border: none;
     border-radius: 10px;
@@ -194,23 +194,23 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.subsection .card {
+.card {
     background-color: rgba(255, 255, 255, 0.5);
     color: var(--b);
     border-radius: 10px 10px 0px 0px;
+    height: 180px;
     position: static;
     width: 100%;
-    height: 180px;
     text-align: center;
     display: flex;
     align-content: center;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
-.subsection .card p {
+.card p {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -446,6 +446,25 @@ video {
     margin-right: 5%;
 }
 
+#section5 .demos-carousels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+}
+
+#section5 .carousel {
+    width: 48%;
+    background-color: #666666;
+}
+
+#section5 .carousel-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 @media (max-width: 700px) {
     .fixed-nav {
         position: fixed;
@@ -523,7 +542,7 @@ video {
         justify-content: flex-start;
     }
 
-    .subsection .details {
+    .details {
         border: none;
         border-radius: 10px;
         padding: 15px 30%;
@@ -531,21 +550,7 @@ video {
         font-size: 16px;
     }
 
-    .subsection .card {
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 10px 10px 0px 0px;
-        position: static;
-        width: 100%;
-        text-align: center;
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-
-    .subsection .card p {
+    .card p {
         font-size: 14px;
         padding: 5px 6px;
     }
@@ -660,5 +665,15 @@ video {
 
     #section4 h3 {
         margin-bottom: 10%;
+    }
+
+    #section5 .demos-carousels {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #section5 .carousel {
+        width: 90%;
+        margin-bottom: 20px;
     }
 }
