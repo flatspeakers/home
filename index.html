@@ -313,57 +313,91 @@
         <section id="section5" class="scroll-section">
             <div class="main-container">
                 <h2 class="demos-title">Demos</h2>
-                <div class="demos-carousels">
-                    <h3 class="demos-title">Deep Bass Model</h3>
-                    <div class="carousel-dots">
-                        <span class="dot" onclick="showPanel(0, 'carousel4')"></span>
-                        <span class="dot" onclick="showPanel(1, 'carousel4')"></span>
+                <div class="video-demos" id="video-demos-id">
+                    <div class="demos-carousels">
+                        <h4 class="demos-title">Deep Bass Model</h4>
+                        <div class="carousel-dots">
+                            <span class="dot" onclick="showPanel(0, 'carousel4')"></span>
+                            <span class="dot" onclick="showPanel(1, 'carousel4')"></span>
+                            <span class="dot" onclick="showPanel(2, 'carousel4')"></span>
+                            <span class="dot" onclick="showPanel(3, 'carousel4')"></span>
+                        </div>
+                        <div class="carousel" id="carousel4">
+                                <div class="carousel-panel active">
+                                    <div class="loading-bar"></div>
+                                    <div class="card">
+                                        <h3>Pop Music Mix</h3>
+                                    </div>
+                                    <button class="details" aria-label="take a listen" onclick="details('assets/sample_1.mp4')">Take a listen</button>
+                                </div>
+                                <div class="carousel-panel">
+                                    <div class="loading-bar"></div>
+                                    <div class="card">
+                                        <h3>Classic Music Mix</h3>
+                                    </div>
+                                    <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
+                                </div>
+                                <div class="carousel-panel">
+                                    <div class="loading-bar"></div>
+                                    <div class="card">
+                                        <h3>Gospel Music Mix</h3>
+                                    </div>
+                                    <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
+                                </div>
+                                <div class="carousel-panel">
+                                    <div class="loading-bar"></div>
+                                    <div class="card">
+                                        <h3>Movies Soundtrack Mix</h3>
+                                    </div>
+                                    <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
+                                </div>
+                                <div class="carousel-nav">
+                                    <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel4')">❮</div>
+                                    <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel4')">❯</div>
+                                </div>
+                        </div>
                     </div>
-                    <div class="carousel" id="carousel4">
-                        <div class="carousel-panel active">
-                            <div class="loading-bar"></div>
-                            <div class="card">
-                                <h3>Demo 1</h3>
+                    <div class="demos-carousels">
+                        <h4 class="demos-title">Ultra Thin Model</h4>
+                        <div class="carousel-dots">
+                            <span class="dot" onclick="showPanel(0, 'carousel5')"></span>
+                            <span class="dot" onclick="showPanel(1, 'carousel5')"></span>
+                            <span class="dot" onclick="showPanel(2, 'carousel4')"></span>
+                            <span class="dot" onclick="showPanel(3, 'carousel4')"></span>
+                        </div>
+                        <div class="carousel" id="carousel5">
+                            <div class="carousel-panel active">
+                                <div class="loading-bar"></div>
+                                <div class="card">
+                                    <h3>Pop Music Mix</h3>
+                                </div>
+                                <button class="details" aria-label="take a listen" onclick="details('assets/sample_1.mp4')">Take a listen</button>
                             </div>
-                            <button class="details" aria-label="take a listen" onclick="details('assets/sample_1.mp4')">Take a listen</button>
-                        </div>
-                        <div class="carousel-panel">
-                            <div class="loading-bar"></div>
-                            <div class="card">
-                                <h3>Demo 2</h3>
+                            <div class="carousel-panel">
+                                <div class="loading-bar"></div>
+                                <div class="card">
+                                    <h3>Classic Music Mix</h3>
+                                </div>
+                                <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
                             </div>
-                            <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
-                        </div>
-                        <div class="carousel-nav">
-                            <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel4')">❮</div>
-                            <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel4')">❯</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="demos-carousels">
-                    <h3 class="demos-title">Ultra Thin Model</h3>
-                    <div class="carousel-dots">
-                        <span class="dot" onclick="showPanel(0, 'carousel5')"></span>
-                        <span class="dot" onclick="showPanel(1, 'carousel5')"></span>
-                    </div>
-                    <div class="carousel" id="carousel5">
-                        <div class="carousel-panel active">
-                            <div class="loading-bar"></div>
-                            <div class="card">
-                                <h3>Demo 1</h3>
+                            <div class="carousel-panel">
+                                <div class="loading-bar"></div>
+                                <div class="card">
+                                    <h3>Gospel Music Mix</h3>
+                                </div>
+                                <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
                             </div>
-                            <button class="details" aria-label="take a listen" onclick="details('assets/sample_1.mp4')">Take a listen</button>
-                        </div>
-                        <div class="carousel-panel">
-                            <div class="loading-bar"></div>
-                            <div class="card">
-                                <h3>Demo 2</h3>
+                            <div class="carousel-panel">
+                                <div class="loading-bar"></div>
+                                <div class="card">
+                                    <h3>Movies Soundtrack Mix</h3>
+                                </div>
+                                <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
                             </div>
-                            <button class="details" aria-label="take a listen" onclick="details('assets/sample_2.mp4')">Take a listen</button>
-                        </div>
-                        <div class="carousel-nav">
-                            <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel5')">❮</div>
-                            <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel5')">❯</div>
+                            <div class="carousel-nav">
+                                <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel5')">❮</div>
+                                <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel5')">❯</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -371,3 +405,13 @@
         </section>
     </body>
 </html>
+
+<!--
+Show:
+Speaker and mic distance
+cellphone screen:
+    music selection
+    bluetooth connection
+    volume
+amplifier config
+ -->
