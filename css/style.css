@@ -483,6 +483,94 @@ video {
     justify-content: space-between;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #dbdbdb;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: left;
+    color: var(--black);
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.modal p{
+    margin: 0px;
+    font-size: 100%;
+}
+
+.modal h3 {
+    display: flex;
+    font-size: 150%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-header img {
+    width: 70%;
+}
+
+.close-modal {
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-list i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 700px) {
     .fixed-nav {
         position: fixed;
@@ -698,5 +786,9 @@ video {
         flex-direction: column;
         width: 90%;
         align-items: center;
+    }
+
+    .modal-content {
+        width: 90%;
     }
 }

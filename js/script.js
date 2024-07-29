@@ -99,10 +99,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeCarousel('carousel3');
     initializeCarousel('carousel4');
     initializeCarousel('carousel5');
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        const modal = document.getElementById('contactModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
 });
 
 function contactUs() {
-    alert('Booking a private demo...');
+    document.getElementById('contactModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('contactModal').style.display = 'none';
 }
 
 function toggleMenu() {

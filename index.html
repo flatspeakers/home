@@ -10,6 +10,7 @@
         <title>Flat Speakers</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="js/script.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
         <nav class="fixed-nav">
@@ -30,8 +31,12 @@
             </a>
         </nav>
 
-        <div class="floating-demo-button">
+        <!-- <div class="floating-demo-button">        
             <button class="contact-us" aria-label="Contact Us" onclick="contactUs()">Contact Us</button>
+        </div> -->
+
+        <div class="floating-demo-button">
+            <button class="contact-us" aria-label="Contact Us" onclick="openContactModal()">Contact Us</button>
         </div>
 
         <section id="section1" class="scroll-section">
@@ -403,6 +408,25 @@
                 </div>
             </div>
         </section>
+
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="assets/Flattie-No-BG.png" alt="Flattie the Speaker Bud" class="modal-image">
+                    <button class="close-modal" onclick="closeModal()">Close</button>
+                </div>
+                <div class="modal-body">
+                    <h3>Reach out to us via</h3>
+                    <ul class="contact-list">
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send/?phone=610494099484">Whatsapp</a></li>
+                        <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/people/Flat-Speakers/61562195462309">Facebook</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/flatspeakers/">Instagram</a></li>
+                        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:flatspeakers@gmail.com">flatspeakers@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> Phone/Message: +610494099484</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
