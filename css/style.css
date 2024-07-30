@@ -71,19 +71,14 @@ h6 {
 }
 
 .scroll-section {
-    height: 97vh;
-    padding: 0px 10px;
-    box-sizing: border-box;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: absolute;
-    top: 62px;
-    left: 0;
     width: 100%;
-    opacity: 0;
-    transition: opacity 1s;
 }
 
 .scroll-section.active {
@@ -112,24 +107,22 @@ h6 {
 }
 
 .main-container {
-    width: 100%;
-    height: 90%;
-    box-sizing: border-box;
-    overflow-y: auto;
+    background-color: var(--white);
+    margin: 2% 0% 0% 0%;
+    width: 90vw;
+    height: 80vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
-    margin: 0px;
 }
 
 .main-description {
     text-align: center;
-    padding: 0px 20px;
-    font-size: 30px;
-    margin: 10px;
+    font-size: calc(1.5vw + 1.5vh);
+    margin: 0% 2% 2% 2%;
 }
 
 .secondary-description {
@@ -139,34 +132,24 @@ h6 {
     margin: 5px;
 }
 
-.content-section {
-    margin-top: 5%;
-}
-
 .models-section {
-    flex: 1;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin: 0% 0% 2% 0%;
+    height: inherit;
 }
 
 .subsection {
-    flex: 1;
-    margin: 10px;
+    margin: 0% 2% 0% 2%;
     background-color: var(--white);
-    padding: 0px 0px 10% 0px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
-    overflow-y: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .details {
@@ -174,17 +157,19 @@ h6 {
     border: none;
     border-radius: 10px;
     color: var(--white);
-    padding: 5% 0%;
     cursor: pointer;
-    font-size: 150%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: calc(1.1vh + 1.1vw);
+    margin-bottom: 10vh;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    width: 80%;
+    width: 35vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:hover {
-    background-color: #333;
+    background-color: #fc9e47c0;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -197,19 +182,14 @@ button:active {
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.692);
     color: var(--b);
     border-radius: 10px 10px 0px 0px;
-    height: 180px;
-    position: static;
-    width: 100%;
-    text-align: center;
+    height: 40%;
     display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .card p {
@@ -217,28 +197,37 @@ button:active {
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    font-size: 20px;
-    padding: 5px 10px;
+    font-size: calc(1.1vh + 1.1vw);
+    padding: 0% 2% 0% 2%;
+}
+
+.subsection .card h3 {
+    font-size: calc(1.5vh + 0.5vw);
+    margin: 5% 0% 0% 0%;
 }
 
 .floating-demo-button {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 5%;
+    right: 3%;
     z-index: 1001;
 }
 
 .contact-us {
-    background: #ff910090;
+    background: #ff9100d7;
     border: none;
     border-radius: 10px;
-    color: rgba(255, 255, 255, 0.5);
-    padding: 15px 30px;
+    color: rgba(255, 255, 255, 0.856);
     cursor: pointer;
-    font-size: 30px;
+    font-size: calc(1.8vh + 1.8vw);
     font-weight: bold;
     box-shadow: 0 6px 10px rgba(253, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    width: 30vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .video-modal {
@@ -588,7 +577,7 @@ video {
         flex-wrap: nowrap;
     }
 
-    .main-container {
+    /* .main-container {
         width: 100%;
         height: 95%;
         box-sizing: border-box;
@@ -596,19 +585,19 @@ video {
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-    }
+    } */
 
-    .main-description {
+    /* .main-description {
         text-align: center;
         padding: 0px 10px;
         font-size: 18px;
-    }
+    } */
 
-    .secondary-description {
+    /* .secondary-description {
         padding: 0px 5px;
         text-align: center;
         font-size: 15px;
-    }
+    } */
 
     .hamburger-menu {
         display: block;
@@ -635,35 +624,35 @@ video {
         display: block;
     }
 
-    .models-section {
+    /* .models-section {
         flex: 1;
         display: flex;
         flex-wrap: wrap;
         margin-top: 20px;
         align-content: space-between;
         flex-direction: row;
-    }
+    } */
 
-    .subsection {
+    /* .subsection {
         justify-content: flex-start;
     }
 
     .card p {
         font-size: 14px;
         padding: 5px 6px;
-    }
+    } */
 
-    .subsection .card h3 {
+    /* .subsection .card h3 {
         margin: 2px;
-    }
+    } */
 
-    .contact-us {
+    /* .contact-us {
         font-size: 20px;
         position: center;
         bottom: 15px;
-    }
+    } */
 
-    .floating-demo-button {
+    /* .floating-demo-button {
         position: fixed;
         display: flex;
         bottom: 2%;
@@ -671,9 +660,9 @@ video {
         left: 5%;
         z-index: 1001;
         flex-direction: column;
-    }
+    } */
 
-    .scroll-section {
+    /* .scroll-section {
         height: 94vh;
         padding: 0% 2%;
         box-sizing: border-box;
@@ -687,7 +676,7 @@ video {
         width: 100%;
         opacity: 0;
         transition: opacity 1s;
-    }
+    } */
 
     .img-carousel {
         width: 95%;
