@@ -219,12 +219,12 @@ button:active {
     border-radius: 10px;
     color: rgba(255, 255, 255, 0.856);
     cursor: pointer;
-    font-size: calc(1.8vh + 1.8vw);
+    font-size: calc(1.5vh + 1.5vw);
     font-weight: bold;
     box-shadow: 0 6px 10px rgba(253, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    width: 30vw;
-    height: 8vh;
+    width: calc(12vh + 12vw);
+    height: calc(3vh + 3vw);
     display: flex;
     align-items: center;
     justify-content: center;
