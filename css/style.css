@@ -79,6 +79,8 @@ h6 {
     text-align: center;
     position: absolute;
     width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .scroll-section.active {
@@ -268,11 +270,10 @@ video {
 
 .carousel {
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: #8d8c8cab;
     position: relative;
     width: 80%;
     height: 70%;
-    margin: 0 auto;
     overflow: hidden;
     justify-content: center;
     display: flex;
