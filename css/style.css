@@ -110,13 +110,13 @@ h6 {
 
 .main-container {
     background-color: var(--white);
-    margin: 2% 0% 0% 0%;
+    margin: 5vh 0% 0% 0%;
     width: 90vw;
     height: 80vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
 }
@@ -194,7 +194,7 @@ button:active {
     align-items: center;
 }
 
-.card p {
+p {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -203,9 +203,12 @@ button:active {
     padding: 0% 2% 0% 2%;
 }
 
-.subsection .card h3 {
+h2 {
+    font-size: calc(1.8vh + 0.8vw);
+}
+
+h3 {
     font-size: calc(1.5vh + 0.5vw);
-    margin: 5% 0% 0% 0%;
 }
 
 .floating-demo-button {
@@ -272,16 +275,11 @@ video {
     border-radius: 10px;
     background-color: #8d8c8cab;
     position: relative;
-    width: 80%;
-    height: 70%;
+    width: 80vw;
+    height: 60vh;
     overflow: hidden;
     justify-content: center;
     display: flex;
-}
-
-#section3 .carousel {
-    width: 80%;
-    height: 50%;
 }
 
 .two-column {
@@ -323,19 +321,15 @@ video {
 
 .carousel-panel {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 80vw;
+    height: 60vh;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;
     flex-direction: column;
+    align-content: stretch;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.carousel-panel h3 {
-    margin: 5px;
+    justify-content: space-around;
 }
 
 .carousel-panel.active {
@@ -343,15 +337,36 @@ video {
     position: relative;
 }
 
+.carousel-panel h3 {
+    height: 10%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-panel p {
+    height: 30%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    text-align: center;
+}
+
 .img-carousel {
-    width: 70%;
-    height: 70%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-carousel img {
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
 }
 
 .carousel-nav {
@@ -601,7 +616,7 @@ video {
         display: block;
     }    
 
-    .img-carousel {
+    /* .img-carousel {
         width: 95%;
         height: 50%;
     }
@@ -610,27 +625,27 @@ video {
         border-radius: 10px;
         width: 100%;
         height: 100%;
-    }
+    } */
 
-    #section3 .carousel {
+    /* #section3 .carousel {
         width: 90%;
         height: auto;
         padding: 2%;
-    }
+    } */
 
-    #section3 .carousel-panel {
+    /* #section3 .carousel-panel {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
-    }
+    } */
 
-    #section3 .carousel-panel h3 {
+    /* #section3 .carousel-panel h3 {
         width: 100%;
         text-align: left;
         margin: 5px 0;
-    }
+    } */
 
-    #section3 .modern-bullet-list {
+    /* #section3 .modern-bullet-list {
         width: 100%;
     }
 
@@ -650,9 +665,9 @@ video {
         margin-bottom: 10px;
         margin-left: 0%;
         margin-right: 0%;
-    }
+    } */
 
-    #section4 .carousel {
+    /* #section4 .carousel {
         height: 65%;
         border-radius: 10px;
         background-color: #ffffff;
@@ -665,21 +680,21 @@ video {
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;        
-    }
+    } */
 
-    #section4 .carousel-panel {
+    /* #section4 .carousel-panel {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-    }
+    } */
 
-    #section4 h3 {
+    /* #section4 h3 {
         margin-bottom: 10%;
     }
 
     #section5 h4 {
         margin: 0px;
-    }
+    } */
 
     #section5 .demos-carousels {
         background-color: #ffffff;
@@ -690,9 +705,9 @@ video {
         border-radius: 10px;
     }
 
-    #section5 .carousel {
+    /* #section5 .carousel {
         margin-bottom: 20px;
-    }
+    } */
 
     #section5 .video-demos {
         flex-direction: column;
