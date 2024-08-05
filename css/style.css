@@ -184,7 +184,7 @@ button:active {
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.692);
+    background-color: rgba(189, 189, 189, 0.568);
     color: var(--b);
     border-radius: 10px 10px 0px 0px;
     height: 40%;
@@ -282,15 +282,6 @@ video {
     display: flex;
 }
 
-.two-column {
-    /* height: 50%; */
-    display: flex;
-    /* flex-direction: row; */
-    /* justify-content: center; */
-    /* flex-wrap: nowrap; */
-    /* align-items: flex-start; */
-}
-
 .modern-bullet-list {
     list-style: none;
     padding: 4%;
@@ -372,8 +363,8 @@ video {
 
 .img-carousel img {
     border-radius: 10px;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
     object-fit: cover;
 }
 
@@ -436,64 +427,59 @@ video {
     background-color: #ff9100;
 }
 
-#section4 .carousel {
-    width: 80%;
-    height: auto;
-}
-
-#section4 .carousel-panel {
+#section4 .img-carousel {
+    height: 50%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-}
-
-#section4 .img-carousel {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 100%;
 }
 
 #section4 .img-carousel img {
-    width: 48%;
     border-radius: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    max-width: 48%;
+    margin: 0 0.5vh;
+    object-fit: cover;
 }
 
-#section5 .video-demos {
+#section5 .models-section {
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 80%;
-    flex-direction: row;
-    align-items: flex-start;
+    width: 80vw;
+    height: 60vh;
+    margin: 0;
 }
 
-#section5 .demos-carousels {
-    background-color: #ffffff;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
+#section5 .subsection {
     width: 100%;
-    height: 80%;
-    flex-direction: column;
-    align-items: center;
-    margin: 0% 2% 0% 2%;
+    height: 100%;
+    margin: 0px 1% 0 1%;
 }
 
 #section5 .carousel {
-    width: 80%;
-    background-color: #666666;
+    width: 100%;
+    height: 100%;
+    margin 0;
 }
 
-#section5 .carousel-panel {
-    display: flex;
-    flex-direction: column;
+.carousel-panel {
+    width: 100%;
+    height: 100%;
+    align-content: center;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#section5 .card {
+    height: 45%;
+    width: 100%;
+    justify-content: center;
+}
+
+#section5 .details {
+    margin-bottom: 15%;
+    width: 80%;
+    height: 25%;
 }
 
 .modal {
@@ -622,87 +608,20 @@ video {
 
     .fixed-nav .title {
         display: block;
-    }    
-
-    /* .img-carousel {
-        width: 95%;
-        height: 50%;
     }
-
-    .img-carousel img {
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-    } */
-
-    /* #section3 .carousel {
-        width: 90%;
-        height: auto;
-        padding: 2%;
-    } */
-
-    /* #section3 .carousel-panel {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    } */
-
-    /* #section3 .carousel-panel h3 {
-        width: 100%;
-        text-align: left;
-        margin: 5px 0;
-    } */
-
-    /* #section3 .modern-bullet-list {
-        width: 100%;
-    }
-
-    #section3 .carousel-panel.active {
-        position: relative;
-        opacity: 1;
-        width: 100%;
+    
+    #section4 .carousel-panel h3 {
+        height: 0;
     }
 
     #section4 .img-carousel {
+        width: 160%;
         flex-direction: column;
-        align-items: center;
-        display: flex;
     }
 
     #section4 .img-carousel img {
-        margin-bottom: 10px;
-        margin-left: 0%;
-        margin-right: 0%;
-    } */
-
-    /* #section4 .carousel {
-        height: 65%;
-        border-radius: 10px;
-        background-color: #ffffff;
-        position: relative;
-        width: 80%;
-        margin: 0 auto;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;        
-    } */
-
-    /* #section4 .carousel-panel {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    } */
-
-    /* #section4 h3 {
-        margin-bottom: 10%;
+        padding: 0.5vh 0;
     }
-
-    #section5 h4 {
-        margin: 0px;
-    } */
 
     #section5 .demos-carousels {
         background-color: #ffffff;
@@ -712,10 +631,6 @@ video {
         margin-top: 2%;
         border-radius: 10px;
     }
-
-    /* #section5 .carousel {
-        margin-bottom: 20px;
-    } */
 
     #section5 .video-demos {
         flex-direction: column;
