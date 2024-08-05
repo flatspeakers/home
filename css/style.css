@@ -427,17 +427,35 @@ video {
     background-color: #ff9100;
 }
 
-#section4 .img-carousel {
-    height: 50%;
+#section3 .carousel {
+    height: 40vh;
+    width: 50vw;
+}
+
+#section3 .main-container {
+    width: 70vw;
+    height: 60vh;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
+}
+
+#section3 .carousel-panel{
+    justify-content: space-evenly;
+}
+
+#section4 .img-carousel {
+    height: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
 }
 
 #section4 .img-carousel img {
     border-radius: 10px;
-    max-width: 48%;
-    margin: 0 0.5vh;
+    max-width: 95%;
+    max-height: 40%;
+    margin: 2% 0;
     object-fit: cover;
 }
 
@@ -608,19 +626,6 @@ video {
 
     .fixed-nav .title {
         display: block;
-    }
-    
-    #section4 .carousel-panel h3 {
-        height: 0;
-    }
-
-    #section4 .img-carousel {
-        width: 160%;
-        flex-direction: column;
-    }
-
-    #section4 .img-carousel img {
-        padding: 0.5vh 0;
     }
 
     #section5 .demos-carousels {
