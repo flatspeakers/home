@@ -112,7 +112,7 @@ h6 {
     background-color: var(--white);
     margin: 5vh 0% 0% 0%;
     width: 90vw;
-    height: 80vh;
+    height: 70vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -276,7 +276,7 @@ video {
     background-color: #8d8c8cab;
     position: relative;
     width: 80vw;
-    height: 60vh;
+    height: 50vh;
     overflow: hidden;
     justify-content: center;
     display: flex;
@@ -321,7 +321,7 @@ video {
 .carousel-panel {
     position: absolute;
     width: 80vw;
-    height: 60vh;
+    height: 50vh;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;
