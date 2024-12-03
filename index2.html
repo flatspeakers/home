@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Morphing Animation</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #2e004f;
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: relative;
+            width: 400px;
+            /* Adjust to fit your image size */
+            height: 400px;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .image-container img.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container" id="imageContainer">
+        <!-- Images will be dynamically inserted here -->
+    </div>
+
+    <script>
+        const imageContainer = document.getElementById("imageContainer");
+        const imageFolder = "./images/home/";
+        const imageCount = 10; // Total images (1.png to 10.png)
+        const intervalTime = 1500; // Time between transitions in milliseconds
+
+        // Load images dynamically
+        for (let i = 1; i <= imageCount; i++)
+        {
+            const img = document.createElement("img");
+            img.src = `${imageFolder}${i}.png`;
+            img.alt = `Speaker view ${i}`;
+            if (i === 1) img.classList.add("active"); // Set the first image as active
+            imageContainer.appendChild(img);
+        }
+
+        // Handle the morphing animation
+        let currentImage = 0;
+        const images = document.querySelectorAll(".image-container img");
+
+        function morphImages()
+        {
+            images[currentImage].classList.remove("active");
+            currentImage = (currentImage + 1) % imageCount; // Cycle through images
+            images[currentImage].classList.add("active");
+        }
+
+        // Start the animation loop
+        setInterval(morphImages, intervalTime);
+    </script>
+</body>
+
+</html>
