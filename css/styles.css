@@ -748,7 +748,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background: linear-gradient(to bottom right, rgba(72, 72, 212, 0.507), rgba(241, 104, 104, 0.493)), url('../images/header-background.jpg') center center no-repeat;
+	background: linear-gradient(to bottom right, rgba(72, 72, 212, 0.75), rgba(241, 104, 104, 0.75)), url('../images/header-background.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -994,7 +994,7 @@ input[type='checkbox'] {
 .basic-1 {
 	padding-top: 6.375rem;
 	padding-bottom: 6.875rem;
-	background: url('../images/video-background.jpg') center center no-repeat;
+	background: linear-gradient(to bottom right, rgba(72, 72, 212, 0.75), rgba(241, 104, 104, 0.75)), url('../images/header-background.jpg') center center no-repeat;
 	background-size: cover; 
 }
 
@@ -1266,7 +1266,7 @@ input[type='checkbox'] {
 .basic-4 {
 	padding-top: 6.5rem;
 	padding-bottom: 6.75rem;
-	background: url('../images/download-background.jpg') center center no-repeat;
+	background: linear-gradient(to bottom right, rgba(72, 72, 212, 0.75), rgba(241, 104, 104, 0.75)), url('../images/header-background.jpg') center center no-repeat;
 	background-size: cover; 
 }
 
