@@ -66,7 +66,7 @@
     /* Card Slider - Swiper */
 	var cardSlider = new Swiper('.card-slider', {
 		autoplay: {
-            delay: 4000,
+            delay: 15000,
             disableOnInteraction: false
 		},
         loop: true,
@@ -101,7 +101,7 @@
 			prevEl: '.swiper-button-prev',
 		},
         spaceBetween: 30,
-        slidesPerView: 5,
+        slidesPerView: 3,
 		breakpoints: {
             // when window is <= 380px
             380: {
