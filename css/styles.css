@@ -250,6 +250,7 @@ a.white {
 	}
 }
 
+.form-control:focus+.label-control,
 .form-control-input:focus + .label-control,
 .form-control-input.notEmpty + .label-control,
 .form-control-textarea:focus + .label-control,
@@ -632,8 +633,8 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-    width: 113px;
-	height: 35px;
+    width: auto;
+	height: 40px;
 	margin-bottom: 0px;
 	-webkit-backface-visibility: hidden;
 }
