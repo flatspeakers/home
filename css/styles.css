@@ -825,8 +825,8 @@ input[type='checkbox'] {
 }
 
 .slider-1 .card-image {
-	width: 6rem;
-	height: 6rem;
+	width: 16rem;
+	height: auto;
 	margin-right: auto;
 	margin-bottom: 0.25rem;
 	margin-left: auto;
