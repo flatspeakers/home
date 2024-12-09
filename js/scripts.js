@@ -101,7 +101,7 @@
 			prevEl: '.swiper-button-prev',
 		},
         spaceBetween: 30,
-        slidesPerView: 3,
+        slidesPerView: 2,
 		breakpoints: {
             // when window is <= 380px
             380: {
