@@ -32,15 +32,33 @@
     });
 
 	// jQuery for page scrolling feature - requires jQuery Easing plugin
-	$(function() {
-		$(document).on('click', 'a.page-scroll', function(event) {
-			var $anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
-			}, 600, 'easeInOutExpo');
-			event.preventDefault();
-		});
-	});
+	// $(function() {
+	// 	$(document).on('click', 'a.page-scroll', function(event) {
+	// 		var $anchor = $(this);
+	// 		$('html, body').stop().animate({
+	// 			scrollTop: $($anchor.attr('href')).offset().top
+	// 		}, 600, 'easeInOutExpo');
+	// 		event.preventDefault();
+	// 	});
+	// });
+
+    $(function ()
+    {
+        $(document).on('click', 'a.page-scroll', function (event)
+        {
+            event.preventDefault(); // Prevent default anchor behavior
+            var targetId = $(this).attr('href').replace('#', ''); // Get target ID without #
+            var targetElement = $('#' + targetId);
+
+            if (targetElement.length)
+            {
+                $('html, body').stop().animate({
+                    scrollTop: targetElement.offset().top
+                }, 600, 'easeInOutExpo');
+            }
+        });
+    });
+
 
     // closes the responsive menu on menu item click
     $(".navbar-nav li a").on("click", function(event) {
@@ -356,7 +374,13 @@
 
     /* Back To Top Button */
     // create the back to top button
-    $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
+    // $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
+    $('body').prepend('<a class="back-to-top page-scroll">Back to Top</a>');
+    $(document).on('click', '.back-to-top', function (event)
+    {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 600, 'easeInOutExpo');
+    });
     var amountScrolled = 700;
     $(window).scroll(function() {
         if ($(window).scrollTop() > amountScrolled) {
