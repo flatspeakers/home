@@ -1929,10 +1929,26 @@ a:hover.back-to-top {
 }
 /* end of min-width width 992px */
 
+@media only screen and (max-width: 768px) {
+
+	/* Adjust the breakpoint as needed */
+	.hidden-navbar {
+		transform: translateY(-100%);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.navbar {
+		transition: transform 0.3s ease-in-out;
+	}
+}
+
 
 /* Min-width width 1200px */
 @media (min-width: 1200px) {
-	
+	.navbar {
+		transition: transform 0.3s ease-in-out;
+	}
+
 	/* Navigation */
 	.navbar-custom {
 		padding: 2.125rem 5rem 2.125rem 5rem;

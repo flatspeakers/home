@@ -42,6 +42,26 @@
 	// 	});
 	// });
 
+    let lastScrollTop = 0; // Track the last scroll position
+
+    $(window).on('scroll', function ()
+    {
+        const navbar = $('.navbar');
+        const currentScroll = $(this).scrollTop();
+
+        if (currentScroll > lastScrollTop)
+        {
+            // Scrolling down
+            navbar.addClass('hidden-navbar');
+        } else
+        {
+            // Scrolling up
+            navbar.removeClass('hidden-navbar');
+        }
+
+        lastScrollTop = currentScroll;
+    });
+
     $(function ()
     {
         $(document).on('click', 'a.page-scroll', function (event)
@@ -58,7 +78,6 @@
             }
         });
     });
-
 
     // closes the responsive menu on menu item click
     $(".navbar-nav li a").on("click", function(event) {
@@ -395,5 +414,24 @@
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
 	});
+
+
+    // let lastScrollTop = 0; // Track the last scroll position
+    // $(window).on('scroll', function ()
+    // {
+    //     const navbar = $('.navbar');
+    //     const currentScroll = $(this).scrollTop();
+
+    //     if (currentScroll > lastScrollTop)
+    //     {
+    //         // Scrolling down
+    //         navbar.addClass('hidden-navbar');
+    //     } else
+    //     {
+    //         // Scrolling up
+    //         navbar.removeClass('hidden-navbar');
+    //     }
+
+    //     lastScrollTop = currentScroll;
 
 })(jQuery);
