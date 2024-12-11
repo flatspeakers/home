@@ -1,458 +1,741 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Flat Speakers - Discover the revolutionary DML technology in our Flat Speakers.">
-        <meta name="keywords" content="Flat Speakers, DML, flat speakers, slim speakers, audio technology">
-        <title>Flat Speakers</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    </head>
-    <body>
-        <nav class="fixed-nav">
-            <div class="nav-menu">
-                <div class="hamburger-menu" onclick="toggleMenu()">
-                    ☰
-                </div>
-                <div class="menu-items">
-                    <button aria-label="Flat Speakers" onclick="scrollToSection('section1')">Flat Speakers</button>
-                    <button aria-label="Features" onclick="scrollToSection('section2')">Features</button>
-                    <button aria-label="Version" onclick="scrollToSection('section3')">Prices</button>
-                    <button aria-label="Applications" onclick="scrollToSection('section4')">Applications</button>
-                    <button aria-label="Demos" onclick="scrollToSection('section5')">Demos</button>
-                </div>
-            </div>
-            <a class="navbar-brand" href="#">
-                <img src="assets/logo-compact.png" alt="Flat Speakers Logo">
-            </a>
-        </nav>
+<head>
+    <!-- Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-F2WKXNL7XS"></script>
+    <script >
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        <div class="floating-demo-button">
-            <button class="contact-us" aria-label="Contact Us" onclick="openContactModal()">Contact Us</button>
+        gtag('config', 'G-F2WKXNL7XS');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Flat Speakers are loudspeakers that employ the latest DML technology to deliver affordable, high-fidelity sound in an elegant, ultra-slim form factor. Seamlessly integrating into any space, Flat Speakers serve as a canvas for your decorative imagination">
+    <meta name="author" content="danieljean">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="Flat Speakers" /> <!-- website name -->
+	<meta property="og:site" content="flatspeakers.au" /> <!-- website link -->
+	<meta property="og:title" content="Flat Speakers"/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="Flat Speakers are loudspeakers that employ the latest DML technology to deliver affordable, high-fidelity sound in an elegant, ultra-slim form factor. Seamlessly integrating into any space, Flat Speakers serve as a canvas for your decorative imagination" /> <!-- description shown in the actual shared post -->
+
+    <!-- Website Title -->
+    <title>Flat Speakers</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="assets/favicon.webp" type="image/gif">
+</head>
+<body>
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
         </div>
+    </div>
 
-        <section id="section1" class="scroll-section">
-            <div class="main-container">
-                <p class="main-description"> 
-                    Flat Speakers employ advanced DML technology to deliver affordable, high-fidelity sound in an elegant, ultra-slim form factor.
-                    Seamlessly integrating into any space, Flat Speakers serve as a canvas for your decorative imagination.
-                </p>
-                
-                <div class="models-section">
-                    <div class="subsection" style="background-image: url('assets/deep-bass-cover.png');">
-                        <div class="card">
-                            <h3>Deep Bass</h3>
-                            <p>30mm flat panel that delivers on the bass. Frequencies range from 55Hz up to 16.5KHz.</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <a class="navbar-brand logo-image" href="index.html"><img src="assets/logo.webp" alt="flat_speakers_logo"></a> 
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#home">FLAT SPEAKERS <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#features">FEATURES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#applications">APPLICATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#price">PRICE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#demos">DEMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </nav> 
+
+    <!-- home -->
+    <header id="home" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="image-container">
+                            <img class="img-fluid" class="lazyload" src="assets/preview_home.webp" alt="flatSpeakerPreview ">
+                        </div> 
+                    </div> 
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h1>PERFECT FOR <span id="js-rotating">DECOR, ART, HUMOR, MEMORIES, BUSINESS, CHURCH, CONCERT, RELAXATION</span></h1>
+                            <h4>Experience audio that not only fills your room but also sparks your imagination</h4>
+                            <p class="p-large">
+                                Flat Speakers employ the latest DML technology to deliver affordable, high-fidelity sound in an
+                                elegant, ultra-slim form factor. Seamlessly integrating into any space, Flat Speakers serve as a canvas for your decorative imagination
+                            </p>
+                            <a class="btn-solid-lg page-scroll" href="index.html#contact"><i class="fas fa-envelope"></i> CONTACT US</a>
+                            <a class="btn-solid-lg popup-youtube" href="https://www.youtube.com/watch?v=DKg0f_Fegp0" data-effect="fadeIn"> <i class="fas fa-play-circle"></i> SEE DETAILS</a>
                         </div>
-                        <button class="details" aria-label="details" onclick="details('assets/deep-bass.mp4')">Details</button>
-                    </div>
-                    <div class="subsection" style="background-image: url('assets/ultra-slim-cover.png');">
-                        <div class="card">
-                            <h3>Ultra Slim</h3>
-                            <p>3mm flat panel that is sure to please all listeners. Frequencies range from 65Hz up to 15.5KHz.</p>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </header>
+
+    <!-- Features -->
+    <div id="features" class="slider-1">
+        <div class="container">
+            <h2 style="justify-self: center; margin-bottom: 1.125rem;">FEATURES</h2>
+            <div class="p-heading p-large">Flat Speakers are the perfect blend of sound quality, simplicity and versatility</div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+                                <!-- Ultra Thin Design -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;">Ultra Thin Design</h3>
+                                        <img class="card-image" src="assets/ultra_thin_design.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">With a height of 75cm, width of 60cm, and just 3cm depth, this ultra-slim speaker combines sleek design with
+                                            practicality. Mounted on its tripod, it extends up to 170cm for versatile placement</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Balanced Response Across All Audiible Frequencies -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;" >Balanced Response Across All Audible Frequencies</h3>
+                                        <img loading="lazy" class="card-image" src="assets/balanced_response_freq.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Regular speakers use many drivers to highlight frequencies. Flat Speakers provide
+                                            consistent and balanced bass, mid, and high frequencies, with no need for
+                                            additional equipment to enjoy high-quality sound</p>
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <!-- Bidirectional Speaker -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;">Bidirectional Speaker</h3>
+                                        <img loading="lazy" class="card-image" src="assets/bidirectional_sound.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Flat Speakers are ideal for live performers because they emit sound from both the
+                                            front and back of the panel. This creates an almost 360-degree sound experience, eliminating the need for separate
+                                            monitors</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Minimum Room Interactions -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;">Minimum Room Interactions</h3>
+                                        <img loading="lazy" class="card-image" src="assets/min_room_interactions.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Unlike bookshelf speakers, which can cause sound reflections and resonance within a room, Flat Speakers have
+                                            minimal interaction with the room environment. Their design reduces unwanted reflections, providing a clearer sound
+                                            experience</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Light-Weight and Portable -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;">Light-Weight and Portable</h3>
+                                        <img loading="lazy" class="card-image" src="assets/portable_lightweight.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">With a compact form factor and weighing just 2 kg, Flat Speakers are perfect for on-the-go listening, providing
+                                            high-quality sound without taking up too much space to transport</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sound Reach and Attenuation -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;">Sound Reach and Attenuation</h3>
+                                        <img loading="lazy" class="card-image" src="assets/reach_attenuation.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Cone speakers often attenuate frequencies over distance, leading to different sound quality in different distances.
+                                            Flat speakers do a better job at preserving the full range of frequencies over distance, ensuring consistent sound
+                                            quality</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sound Clarity -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;">Sound Clarity</h3>
+                                        <img class="card-image" src="assets/clarity.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Sound is naturally produced by vibrations that move air around an instrument. Flat Speakers
+                                            replicate this process by creating vibration regions on the panel. This method closely mimics the
+                                            original sound source</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sound Coverage -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;">Sound Coverage</h3>
+                                        <img loading="lazy" class="card-image" src="assets/coverage.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Cone speakers deliver the best sound when the listener is directly in front of them, often requiring
+                                            multiple speakers to cover a room. Flat Speakers can project sound up to 170 degrees
+                                            from a single panel, providing expansive coverage and easily filling the room with quality sound</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- No Mic Feedback -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <h3 class="testimonial-author" style="margin: 1em;">No Mic Feedback</h3>
+                                        <img loading="lazy" class="card-image" src="assets/no_mic_feedback.webp" alt="flat_speakers_featires">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Flat Speakers are a great choice for live performances because they are inherently immune to feedback sounds caused by
+                                            microphones or instruments. This ensures a smooth and uninterrupted audio experience</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <button class="details" aria-label="details" onclick="details('assets/ultra-slim.mp4')">Details</button>
-                    </div>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div>
+
+    <!-- Applications -->
+    <div id="applications" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>APPLICATIONS</h2>
+                    <div class="p-heading p-large">From regular music listening to art display, Flat Speakers are truly a canvas for your decorative imagination</div>
                 </div>
             </div>
-        </section>
+            <div class="slider-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="slider-container">
+                                <div class="swiper-container image-slider">
+                                    <div class="swiper-wrapper">                                        
+                                        <!-- Wall Decor -->
+                                        <div class="swiper-slide">
+                                            <h4>Wall Decor</h4>
+                                            <a href="assets/std_wall_decor_1.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_wall_decor_1.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                            <a href="assets/std_wall_decor_2.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_wall_decor_2.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                        </div>
+                                        <!-- Art Canvas -->
+                                        <div class="swiper-slide">
+                                            <h4>Art Canvas</h4>
+                                            <a href="assets/std_print_art_1.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_print_art_1.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                            <a href="assets/std_print_art_2.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_print_art_2.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                        </div>
+                                        <!-- Quotes/Phrases -->
+                                        <div class="swiper-slide">
+                                            <h4>Quotes and Phrases</h4>
+                                            <a href="assets/std_funny_quote_1.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_funny_quote_1.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                            <a href="assets/std_funny_quote_2.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_funny_quote_2.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                        </div>
+                                        <!-- Memories Canvas -->
+                                        <div class="swiper-slide">
+                                            <h4>Memories Canvas</h4>
+                                            <a href="assets/std_memories_1.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_memories_1.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                            <a href="assets/std_memories_2.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_memories_2.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                        </div>
+                                        <!-- Logos and Ads -->
+                                        <div class="swiper-slide">
+                                            <h4>Logos and Ads</h4>
+                                            <a href="assets/std_logo_ad_1.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_logo_ad_1.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                            <a href="assets/std_logo_ad_2.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_logo_ad_2.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                        </div>
+                                        <!-- Live Music -->
+                                        <div class="swiper-slide">
+                                            <h4>Live Music</h4>
+                                            <a href="assets/std_live_1.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_live_1.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                            <a href="assets/std_live_2.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_live_2.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                        </div>
+                                        <!-- Home Theater -->
+                                        <div class="swiper-slide">
+                                            <h4>Home Theater</h4>
+                                            <a href="assets/std_home_theater_1.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_home_theater_1.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                            <a href="assets/std_home_theater_2.webp" class="popup-link" data-effect="fadeIn">
+                                                <img loading="lazy" class="img-fluid" src="assets/std_home_theater_2.webp" alt="alternative" style="margin: 1em;">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div> 
+                            </div> 
+                        </div>    
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div>     
 
-        <section id="section2" class="scroll-section">
-            <div class="main-container">                
-                <h2 class="advantages-title">Features</h2>
-                <div class="carousel-dots">
-                    <span class="dot" onclick="showPanel(0, 'carousel1')"></span>
-                    <span class="dot" onclick="showPanel(1, 'carousel1')"></span>
-                    <span class="dot" onclick="showPanel(2, 'carousel1')"></span>
-                    <span class="dot" onclick="showPanel(3, 'carousel1')"></span>
-                    <span class="dot" onclick="showPanel(4, 'carousel1')"></span>
-                    <span class="dot" onclick="showPanel(5, 'carousel1')"></span>
-                    <span class="dot" onclick="showPanel(6, 'carousel1')"></span>
-                    <span class="dot" onclick="showPanel(7, 'carousel1')"></span>
-                </div>
-                <div class="carousel" id="carousel1">
-                    <div class="carousel-panel active">
-                        <div class="loading-bar"></div>
-                        <h3>Balanced Response Across All Audiible Frequencies</h3>
-                        <p>
-                            Regular bookshelf speakers require a subwoofer to handle lower frequencies. Flat
-                            speakers provide consistent and balanced bass, mid, and high frequencies, so you don’t need
-                            additional equipment to enjoy high-quality sound.
-                        </p>
-                        <div class="img-carousel">
-                            <img src="assets/std_ideal_freq_response.png" alt="Balanced Response">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Sound Clarity</h3>
-                        <p>
-                            Sound is naturally produced by vibrations that move air around an instrument. Our flat panels
-                            replicate this process by creating vibration regions on the panel. This method closely mimics the
-                            original sound source. Bookshelf speakers rely on a cone or diaphragm to produce sound,
-                            which can limit accuracy.
-                        </p>
-                        <div class="img-carousel">
-                            <img src="assets/std_sound_clarity.gif" alt="Sound Clarity">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Sound Coverage</h3>
-                        <p>
-                            Cone speakers deliver the best sound when the listener is directly in front of them, often requiring
-                            multiple speakers to cover a room. Our Flat Speakers, however, can project sound up to 170 degrees
-                            from a single panel, providing expansive coverage and easily filling the room with one (mono) or two
-                            (stereo) flat speakers.
-                        </p>
-                        <div class="img-carousel">
-                            <img src="assets/std_sound_propagation.png" alt="Sound Coverage">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Sound Reach and Attenuation</h3>
-                        <p>
-                            Flat speakers excel in maintaining sound quality over longer distances compared to bookshelf speakers. Cone speakers
-                            often attenuate lower frequencies over distance, leading to a high-pitched sound. Flat speakers preserve the full
-                            range of frequencies, ensuring consistent sound quality.
-                        </p>
-                        <div class="img-carousel">
-                            <img src="assets/std_attenuation.png" alt="Sound Reach and Attenuation">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Minimum Room Interactions</h3>
-                        <p>
-                            Unlike bookshelf speakers, which can cause sound reflections and resonance within a room, our flat panels have minimal
-                            interaction with the room environment. Their design reduces unwanted reflections, providing a clearer sound experience.
-                        </p>
-                        <div class="img-carousel">
-                            <img src="assets/std_room_interactions.png" alt="Minimum Room Interactions">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Bidirectional Speaker</h3>
-                        <p>
-                            Flat Speakers are ideal for musicians, churches, pubs, and live performers because they emit sound from both the front
-                            and back of the panel. This creates an almost 360-degree sound experience, eliminating the need for separate monitors.
-                        </p>
-                        <div class="img-carousel">
-                            <img src="assets/std_bidirectional_sound.png" alt="Bidirectional Speaker">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Portable</h3>
-                        <p>
-                            Weighing just 2 kg, our speakers are perfect for on-the-go listening, providing high-quality sound without taking up
-                            much space in your vehicle.
-                        </p>
-                        <div class="img-carousel">
-                            <img src="assets/std_portable.png" alt="Portable">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>No Mic Feedback</h3>
-                        <p>
-                            Flat Speakers are a great choice for live performances because they are inherently immune to feedback sounds caused by
-                            microphones or instruments. This ensures a smooth and uninterrupted audio experience.
-                        </p>
-                        <div class="img-carousel">
-                            <img src="assets/std_no_mic_feedback.png" alt="No Mic Feedback">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-nav">
-                    <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel1')">❮</div>
-                    <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel1')">❯</div>
+    <!-- Price -->
+    <div id="price" class="tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>PRICE</h2>
+                    <div class="p-heading p-large">Exceptional sound meets artistic design at a fair price</div>
                 </div>
             </div>
-        </section>
+            <div class="row">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2"
+                            aria-selected="true"><i class="fas fa-check-square"></i>STARTING PRICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-4" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4"
+                            aria-selected="false"><i class="fas fa-pencil-alt"></i>INCLUDED</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
+                            aria-selected="false"><i class="fas fa-minus-square"></i>ADDITIONALS</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4 style="justify-self: center;">BASE MODELS</h4>
+                                    <div class="icon-cards-area">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 style="justify-self: center;" class="card-title">Mono: A$380</h4>
+                                                <img loading="lazy" class="img-fluid" src="assets/mono_model.webp" alt="alternative">
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 style="justify-self: center;" class="card-title">Stereo: A$420</h4>
+                                                <img loading="lazy" class="img-fluid" src="assets/stereo_model.webp" alt="alternative">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="icon-cards-area" style="justify-self: center;">
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Cover with Art</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Cover with Phrases</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Cover with Your Logo</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Cover with Your Memories</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> LED around Panel</p>
+                                        </div>
+                                    </div>
+                                </div>                                 
+                            </div> 
+                        </div> 
+                        <div class="col-lg-12">
+                            <div class="p-heading p-large">Got a different idea? Let's talk!</div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="icon-cards-area" style="justify-self: center;">
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Class D amplifier</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Panel of 25W Flat Speaker</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> 12Vdc 5A Power Supply</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Connection Cables</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Dampening Structure</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Basic Color Paint Finishing</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="fas fa-check-square" style="justify-self: center;"> Wall Mount and Tripod Support</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    
+    <!-- Demos -->
+    <div id="demos" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" style="justify-items: center; text-align: center;">
+                    <h2>DEMOS</h2>
+                    <div class="p-heading p-large">From music listening to movie watching, Flat Speakers will enhance your audio experience</div>
+                    <a class="btn-solid-reg popup-with-move-anim" style="margin: 1em;" href="#recording-details">RECORDING DETAILS</a>
+                    <a class="btn-solid-reg popup-with-move-anim" style="margin: 1em;" href="#live-demo-locations">LIVE DEMO LOCATIONS</a>
+                </div> 
+            </div> 
+    
+            <div class="slider-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="slider-container">
+                                <div class="swiper-container image-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <!-- Pop Music Mix -->
+                                            <div class="image-container">
+                                                <h3>Pop Music Mix</h3>
+                                                <div class="video-wrapper">
+                                                    <a class="popup-youtube" href="https://www.youtube.com/watch?v=DKg0f_Fegp0" target="_blank" data-effect="fadeIn">
+                                                        <img loading="lazy" class="img-fluid" src="assets/logo.webp" alt="alternative">
+                                                        <span class="video-play-button">
+                                                            <span></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
 
-        <section id="section3" class="scroll-section">
-            <div class="main-container">
-                <h2 class="prices-title">Prices</h2>
-                <div class="carousel-dots">
-                    <span class="dot" onclick="showPanel(0, 'carousel2')"></span>
-                    <span class="dot" onclick="showPanel(1, 'carousel2')"></span>
-                    <span class="dot" onclick="showPanel(2, 'carousel2')"></span>
-                    <span class="dot" onclick="showPanel(3, 'carousel2')"></span>
-                </div>
-                <div class="carousel" id="carousel2">
-                    <div class="carousel-panel active">
-                        <div class="loading-bar"></div>
-                        <h3>Mono System Starting at A$300</h3>
-                        <ul class="modern-bullet-list">
-                            <li>One Deep Bass Model, or</li>
-                            <li>One Ultra Slim model</li>
-                        </ul>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Stereo System Starting at A$400</h3>
-                        <ul class="modern-bullet-list">
-                            <li>Two (Left and Right) Deep Bass Model, or</li>
-                            <li>Two (Left and Right) Ultra Slim model</li>
-                        </ul>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Included in All models</h3>
-                        <ul class="modern-bullet-list">
-                            <li>25W Flat Speaker</li>
-                            <li>Power Supply 12Vdc 5A</li>
-                            <li>Connection Cables</li>
-                            <li>Dampening structure</li>
-                            <li>Painted finishing. Feel free to choose the color</li>
-                            <li> Support structure: Wall Mount or Tripod</li>
-                        </ul>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Optionals</h3>
-                        <ul class="modern-bullet-list">
-                            <li>Cover with art, portraits, phrases, etc</li>
-                            <li>LED backed panel</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="carousel-nav">
-                    <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel2')">❮</div>
-                    <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel2')">❯</div>
-                </div>
+                                        <!-- Classic Music Mix -->
+                                        <div class="swiper-slide">
+                                            <div class="image-container">
+                                                <h3>Classic Music Mix</h3>
+                                                <div class="video-wrapper">
+                                                    <a class="popup-youtube" href="https://www.youtube.com/watch?v=DKg0f_Fegp0" target="_blank" data-effect="fadeIn">
+                                                        <img loading="lazy" class="img-fluid" src="assets/logo.webp" alt="alternative">
+                                                        <span class="video-play-button">
+                                                            <span></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Gospel Music Mix -->
+                                        <div class="swiper-slide">
+                                            <div class="image-container">
+                                                <h3>Gospel Music Mix</h3>
+                                                <div class="video-wrapper">
+                                                    <a class="popup-youtube" href="https://www.youtube.com/watch?v=DKg0f_Fegp0" target="_blank" data-effect="fadeIn">
+                                                        <img loading="lazy" class="img-fluid" src="assets/logo.webp" alt="alternative">
+                                                        <span class="video-play-button">
+                                                            <span></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Movies Soundtrack -->
+                                        <div class="swiper-slide">
+                                            <div class="image-container">
+                                                <h3>Movies Soundtrack</h3>
+                                                <div class="video-wrapper">
+                                                    <a class="popup-youtube" href="https://www.youtube.com/watch?v=DKg0f_Fegp0" target="_blank" data-effect="fadeIn">
+                                                        <img loading="lazy" class="img-fluid" src="assets/logo.webp" alt="alternative">
+                                                        <span class="video-play-button">
+                                                            <span></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Voice Only Mix -->
+                                        <div class="swiper-slide">
+                                            <div class="image-container">
+                                                <h3>Voice Only Mix</h3>
+                                                <div class="video-wrapper">
+                                                    <a class="popup-youtube" href="https://www.youtube.com/watch?v=DKg0f_Fegp0" target="_blank" data-effect="fadeIn">
+                                                        <img loading="lazy" class="img-fluid" src="assets/logo.webp" alt="alternative">
+                                                        <span class="video-play-button">
+                                                            <span></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bass-Head Mix -->
+                                        <div class="swiper-slide">
+                                            <div class="image-container">
+                                                <h3>Bass-Head Mix</h3>
+                                                <div class="video-wrapper">
+                                                    <a class="popup-youtube" href="https://www.youtube.com/watch?v=DKg0f_Fegp0" target="_blank" data-effect="fadeIn">
+                                                        <img loading="lazy" class="img-fluid" src="assets/logo.webp" alt="alternative">
+                                                        <span class="video-play-button">
+                                                            <span></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
             </div>
-        </section>
+        </div> 
+    </div> 
 
-        <section id="section4" class="scroll-section">
-            <div class="main-container">
-                <h2 class="advantages-title">Applications</h2>
-                <div class="carousel-dots">
-                    <span class="dot" onclick="showPanel(0, 'carousel3')"></span>
-                    <span class="dot" onclick="showPanel(1, 'carousel3')"></span>
-                    <span class="dot" onclick="showPanel(2, 'carousel3')"></span>
-                    <span class="dot" onclick="showPanel(3, 'carousel3')"></span>
-                    <span class="dot" onclick="showPanel(4, 'carousel3')"></span>
-                    <span class="dot" onclick="showPanel(5, 'carousel3')"></span>
-                    <span class="dot" onclick="showPanel(6, 'carousel3')"></span>
-                </div>
-                <div class="carousel" id="carousel3">
-                    <div class="carousel-panel active">
-                        <div class="loading-bar"></div>
-                        <h3>Wall decoration</h3>
-                        <div class="img-carousel">
-                            <img src="assets/std_wall_decor_1.png" alt="Application 1 Image 1">
-                            <img src="assets/std_wall_decor_2.png" alt="Application 1 Image 2">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Printed Art Canvas</h3>
-                        <div class="img-carousel">
-                            <img src="assets/std_print_art_1.png" alt="Application 2 Image 1">
-                            <img src="assets/std_print_art_2.png" alt="Application 2 Image 2">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Printed Quotes/Phrases</h3>
-                        <div class="img-carousel">
-                            <img src="assets/std_funny_quote_1.png" alt="Application 3 Image 1">
-                            <img src="assets/std_funny_quote_2.png" alt="Application 3 Image 2">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Printed Memories</h3>
-                        <div class="img-carousel">
-                            <img src="assets/std_memories_1.png" alt="Application 4 Image 1">
-                            <img src="assets/std_memories_2.png" alt="Application 4 Image 2">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Printed Logos/Ads</h3>
-                        <div class="img-carousel">
-                            <img src="assets/std_logo_ad_1.png" alt="Application 5 Image 1">
-                            <img src="assets/std_logo_ad_2.png" alt="Application 5 Image 2">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Church/Concert</h3>
-                        <div class="img-carousel">
-                            <img src="assets/std_live_1.png" alt="Application 6 Image 1">
-                            <img src="assets/std_live_2.png" alt="Application 6 Image 2">
-                        </div>
-                    </div>
-                    <div class="carousel-panel">
-                        <div class="loading-bar"></div>
-                        <h3>Home Theater Sound System</h3>
-                        <div class="img-carousel">
-                            <img src="assets/std_home_theater_1.png" alt="Application 7 Image 1">
-                            <img src="assets/std_home_theater_2.png" alt="Application 7 Image 2">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-nav">
-                    <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel3')">❮</div>
-                    <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel3')">❯</div>
-                </div>
+    <!-- Recording Details -->
+    <div id="recording-details" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-12">
+                <h3>Recording Details</h3>
+                <hr>
+                <p>Flat Speakers utilize advanced Distributed Mode Loudspeaker (DML) technology to deliver exceptional audio. However,
+                recordings may not fully reflect their high-fidelity sound due to factors like microphone quality, recording
+                environment, and playback equipment. Below, we outline the setup and process used to capture the speaker output</p>
+                <table>
+                    <tr>
+                        <td class="icon-cell"><i class="fas fa-map"></i></td>
+                        <td>Place of recording: 60m&sup2 empty church auditorium</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><i class="fas fa-microphone"></i></td>
+                        <td>Capturing Device: SM57 Cardioid Dynamic Microphone</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><i class="fab fa-cloudsmith"></i></td>
+                        <td>Conection and Recording Device: Connected to iPad via USB To XLR Cable Adapter</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><i class="fas fa-tape"></i></td>
+                        <td>Distance from microphone to speakers: 2 meters</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><i class="fab fa-youtube"></i></td>
+                        <td>Sound/Music Source: Youtube Music</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><i class="fas fa-play"></i></td>
+                        <td>Player Device: Android Smart Phone Poco X3</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><i class="fas fa-plug"></i></td>
+                        <td>Connection to Player Device: 3.5mm TRS cable (Bluetooth 5.0 supported)</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><i class="fas fa-ruler-vertical"></i></td>
+                        <td>Ghaph: Frequency response in Herts (X-axis) vs Air pressure in dbs (Y-axis)</td>
+                    </tr>
+                </table>
+                <a class="btn-outline-reg mfp-close as-button" href="#details">BACK</a>
             </div>
-        </section>
-
-        <section id="section5" class="scroll-section">
-            <div class="main-container">
-                <h2 class="demos-title">Demos</h2>
-                <div class="models-section">
-                    <div class="subsection">
-                        <h4 class="demos-title">Deep Bass Model</h4>
-                        <div class="carousel-dots">
-                            <span class="dot" onclick="showPanel(0, 'carousel4')"></span>
-                            <span class="dot" onclick="showPanel(1, 'carousel4')"></span>
-                            <span class="dot" onclick="showPanel(2, 'carousel4')"></span>
-                            <span class="dot" onclick="showPanel(3, 'carousel4')"></span>
-                            <span class="dot" onclick="showPanel(4, 'carousel4')"></span>
-                        </div>
-                        <div class="carousel" id="carousel4">
-                            <div class="carousel-panel active" style="background-image: url('assets/deep-bass-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Pop Music Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_1.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-panel" style="background-image: url('assets/deep-bass-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Classic Music Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_2.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-panel" style="background-image: url('assets/deep-bass-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Gospel Music Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_2.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-panel" style="background-image: url('assets/deep-bass-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Movies Soundtrack Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_2.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-panel" style="background-image: url('assets/deep-bass-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Vocal Only Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_2.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-nav">
-                                <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel4')">❮</div>
-                                <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel4')">❯</div>
-                            </div>
-                        </div>
+        </div> 
+    </div> 
+    
+    <!-- Live Demo Locations -->  
+    <div id="live-demo-locations" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-12">
+                <h3>Live Demo Locations</h3>
+                <hr>
+                <p>Flat Speakers are engineered to deliver exceptional audio through cutting-edge Distributed Mode Loudspeaker (DML)
+                technology. However, recording the true output of our speakers can be challenging, as factors like microphone quality,
+                recording environment, and playback equipment may alter the perceived sound. To truly experience their high-fidelity
+                performance, we recommend listening in person</p>
+                <h4 style="justify-self: center;">Explore the following locations for a live demo</h4>   
+                <div class="icon-cards-area" style="justify-self: center;">
+                    <div class="card-body">
+                        <a class="fas fa-map" href="https://maps.app.goo.gl/ya5GFShvjL82JA1Z8" target="_blank"> Space Pizza - Hampstead Rd</a>
                     </div>
-                    <div class="subsection">
-                        <h4 class="demos-title">Ultra Thin Model</h4>
-                        <div class="carousel-dots">
-                            <span class="dot" onclick="showPanel(0, 'carousel5')"></span>
-                            <span class="dot" onclick="showPanel(1, 'carousel5')"></span>
-                            <span class="dot" onclick="showPanel(2, 'carousel5')"></span>
-                            <span class="dot" onclick="showPanel(3, 'carousel5')"></span>
-                            <span class="dot" onclick="showPanel(4, 'carousel5')"></span>
-                        </div>
-                        <div class="carousel" id="carousel5">
-                            <div class="carousel-panel active" style="background-image: url('ultra-slim-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Pop Music Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_1.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-panel" style="background-image: url('ultra-slim-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Classic Music Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_2.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-panel" style="background-image: url('ultra-slim-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Gospel Music Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_2.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-panel" style="background-image: url('ultra-slim-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Movies Soundtrack Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_2.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-panel" style="background-image: url('ultra-slim-cover.png');">
-                                <div class="loading-bar"></div>
-                                <div class="card">
-                                    <h3>Vocal Only Mix</h3>
-                                </div>
-                                <button class="details" aria-label="details" onclick="details('assets/sample_2.mp4')">Take a
-                                    listen</button>
-                            </div>
-                            <div class="carousel-nav">
-                                <div class="carousel-arrow left-arrow" onclick="prevPanel('carousel5')">❮</div>
-                                <div class="carousel-arrow right-arrow" onclick="nextPanel('carousel5')">❯</div>
-                            </div>
-                        </div>
+                    <div class="card-body">
+                        <a class="fas fa-map" href="https://maps.app.goo.gl/bWrZRVSQ4DX7GtQA6" target="_blank"> Space Pizza - Henley Beach Rd</a>
                     </div>
                 </div>
+                <a class="btn-outline-reg mfp-close as-button" href="#details">BACK</a>
             </div>
-        </section>
+        </div> <!-- end of row -->
+    </div> 
 
-        <div id="contactModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button class="close-modal" onclick="closeModal()">Close</button>
-                </div>
-                <div class="modal-body">
-                    <h3>Reach out to us via</h3>
-                    <ul class="contact-list">
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send/?phone=610494099484">Whatsapp</a></li>
-                        <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/people/Flat-Speakers/61562195462309">Facebook</a></li>
-                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/flatspeakers/">Instagram</a></li>
-                        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:danieljean@flatspeakers.au">danieljean@flatspeakers.au</a></li>
-                        <li><i class="fas fa-phone"></i> Phone/Message: +610494099484</li>
+    <!-- Contact -->
+    <div id="contact" class="form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>CONTACT</h2>
+                    <ul class="list-unstyled li-space-lg">
+                        <li class="address">Reach out to us or use the contact form below</li>
+                        <li><i class="fab fa-whatsapp"></i> <a class="blue" href="https://api.whatsapp.com/send/?phone=610494099484" target="_blank">Whatsapp</a></li>
+                        <li><i class="fas fa-phone"></i><a class="blue" href="Phone/Message: +610494099484" target="_blank">+61 04 940 994 84</a></li>
+                        <li><i class="fas fa-envelope"></i> Email: <a class="blue" href="mailto:danieljean@flatspeakers.au" target="_blank">danieljean@flatspeakers.au</a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+                </div> 
+            </div> 
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <form target="_blank" action="https://formsubmit.co/ca86061d56ed6dd8948948b81068d7f6" method="POST" data-toggle="validator" data-focus="false">
+                        <div class="form-group">
+                                <input type="text" name="name" class="form-control-input" placeholder="Name" required>
+                                <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control-input" placeholder="Email" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" class="form-control-textarea" name="message" rows="10" required></textarea>
+                        </div>
 
-<!--
-Show:
-Speaker and mic distance
-cellphone screen:
-    music selection
-    bluetooth connection
-    volume
-amplifier config
- -->
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">SEND MESSAGE</button>
+                        </div>
+                    </form>
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col">
+                        <h4>About Flat Speakers</h4>
+                        <p>We’re passionate about delivering cutting-edge audio solutions that redefine the listening experience. Using the latest
+                        Distributed Mode Loudspeaker (DML) technology, we craft ultra-slim loudspeakers that produce high-fidelity sound with an
+                        aesthetically pleasing design. Perfect for music enthusiasts and creative decorators alike, Flat Speakers seamlessly
+                        blend functionality with style, offering exceptional sound quality without compromise</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="footer-col middle"></div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <h4>Social Media</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <li><i class="fab fa-youtube"></i> <a class="blue" href="https://www.youtube.com/@FlatSpeakers" target="_blank">Youtube</a> </li>
+                            <li><i class="fab fa-facebook"></i> <a class="blue" href="https://www.facebook.com/people/Flat-Speakers/61562195462309" target="_blank">Facebook</a> </li>
+                            <li><i class="fab fa-instagram"></i> <a class="blue" href="https://www.instagram.com/flatspeakers/" target="_blank">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © Leno - Mobile App HTML Landing Page Template by <a href="https://inovatik.com">Inovatik</a> and modified by <a href="https://www.linkedin.com/in/danielvasc/">Daniel Jean</a></p>
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    
+    <!-- Scripts -->
+    <script  data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script  src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script  src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script  src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script  src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script  src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script  src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script  src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script  src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script  src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
